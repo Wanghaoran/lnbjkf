@@ -1,0 +1,54 @@
+<div class="panel">
+  <h1>添加文章</h1>
+  <div class="pageFormContent" layoutH="56">
+    <form method="post" action="__ACTION__/callbackType/closeCurrent/navTabId/knowledge_publicknowledgearticle" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone)">
+
+      <p style="width:180px;">
+      <label style="width:60px;">所属栏目：</label>
+      <select name="cid">
+	<volist name="result_category" id="rc">
+	<eq name="result.cid" value="$rc.id">
+	<option value="<!--{$rc.id}--!>" selected="selected"><!--{$rc.name}--!></option>
+	<else/>
+	<option value="<!--{$rc.id}--!>"><!--{$rc.name}--!></option>
+	</eq>
+	</volist>
+      </select>
+	</p>
+      <p style="width:430px;"><label style="width:60px;">文章标题：</label>
+      <input style="margin-left:10px;" type="text" class="textInput required" name="title" size="50" value="<!--{$result.title}--!>" />
+      </p>
+	<eq name="result.isinsideleft" value="1">
+	<p style="width:100px;"><input type="checkbox" name="isinsideleft" value="1" checked>内页健康点滴</p>
+	<else/>
+	<p style="width:100px;"><input type="checkbox" name="isinsideleft" value="1">内页健康点滴</p>
+	</eq>
+	<eq name="result.isindexpic" value="1">
+	<p style="width:100px;"><input type="checkbox" name="isindexpic" value="1" checked>首页幻灯显示</p>
+	<else/>
+	<p style="width:100px;"><input type="checkbox" name="isindexpic" value="1">首页幻灯显示</p>
+	</eq>
+	<eq name="result.isindexleft" value="1">
+	<p style="width:100px;"><input type="checkbox" name="isindexleft" value="1" checked>首页科普知识</p>
+	<else/>
+	<p style="width:100px;"><input type="checkbox" name="isindexleft" value="1">首页科普知识</p>
+	</eq>
+	<p style="width:430px;">
+	  <label style="width:180px;">图片上传(不用上传留空即可)：</label><input type="file" name="pic" />
+	</p>
+      <div class="divider"></div>
+      <p style="width:100%;height:400px;">
+      <textarea class="editor" name="content" style="width:96%;" rows="20"><!--{$result.content|stripslashes}--!></textarea>
+
+	</p>
+	<input type="hidden" name="id" value="<!--{$Think.get.id}--!>" />
+      <div class="formBar">
+	<ul>
+	  <li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+	  <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+	</ul>
+      </div>
+    </form>
+
+  </div>
+</div>

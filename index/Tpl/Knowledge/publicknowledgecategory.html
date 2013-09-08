@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大众科普 - 中国老年学学会-保健康复委员会</title>
+<link href="__PUBLIC__/index/css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<include file="Index:header" />
+<div id="container">
+  <div class="erji_lf">
+	  <div class="erji_lftitle"><img src="__PUBLIC__/index/images/erji-tt2.jpg" width="179" height="60" /></div>
+	  <div class="erji_lfmenu">
+	  	<ul>
+			<li><a href="__ROOT__/knowledge/publicknowledgecategory">大众科普</a></li>
+			<volist name="public_category" id="pc">
+			<li class="kepu_none"><a href="__ROOT__/knowledge/publicknowledgecategory/cid/<!--{$pc.id}--!>"><!--{$pc.name}--!></a></li>
+			</volist>
+			<li><a href="__ROOT__/knowledge/specialtyknowledgecategory">专业科普</a></li>
+			<volist name="specialty_category" id="sc">
+			<li class="kepu_none"><a href="__ROOT__/knowledge/specialtyknowledgecategory/cid/<!--{$sc.id}--!>"><!--{$sc.name}--!></a></li>
+			</volist>
+		</ul>
+	  </div>
+      <div></div>
+  </div>
+  <div class="erji_center">
+  <div class="erji_rttop"><span class="erji_rrtitle">大众科普</span><span class="erji_rtnav"><strong>当前位置：</strong>首页 - 科普知识 - 大众科普</span></div>
+  <div class="erji_news">
+	<ul>
+	<volist name="result" id="r">
+	<li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$r.id}--!>">【<!--{$r.name}--!>】<!--{$r.title}--!></a><a class="news_time"></a></li>
+	</volist>
+	</ul>
+<div style="margin-top:15px;float:right;"><!--{$show}--!></div>
+  </div>
+  </div>
+  <div class="pub_clear"></div>
+</div>
+<include file="Index:footer" />
+
+</body>
+</html>

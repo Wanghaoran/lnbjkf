@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国老年学学会-保健康复委员会</title>
+<link href="__PUBLIC__/index/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/index/css/imagechange.css"  rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/index/js/jquery-1.10.2.min.js" ></script>
+<script src="__PUBLIC__/index/js/imagechange.js" ></script>
+</head>
+
+<body>
+<include file="Index:header" />
+
+<div id="container">
+	<div class="cont_lf">
+		<div class="left_pic">
+		   	<div id="banner"> 
+							<div id="banner_bg"></div><!--标题背景-->
+							<div id="banner_info"></div><!--标题-->
+							<ul>
+								<li class="on">1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+							</ul>
+							<div id="banner_list">
+							  <volist name="result_pic" id="rp">
+							  <eq name="rp.type" value="2">
+							  <a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$rp.id}--!>" target="_blank"><img src="__ROOT__/Upload/<!--{$rp.pic}--!>" title="<!--{$rp.title}--!>" alt="<!--{$rp.title}--!>"/></a>
+							  <else/>
+							  <a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$rp.id}--!>" target="_blank"><img src="__ROOT__/Upload/<!--{$rp.pic}--!>" title="<!--{$rp.title}--!>" alt="<!--{$rp.title}--!>"/></a>
+							  </eq>
+							  </volist>
+
+						      </div>
+		  </div>
+		
+		</div>
+		<div class="left_kepu"><span class="pub_title"><img src="__PUBLIC__/index/images/erji-tt2.jpg" width="179" height="60" /></span><span class="pub_titlerg"><a href="__ROOT__/knowledge/publicknowledgecategory">更多&gt;&gt;</a></span>
+		<div class="pub_clear"></div>
+        <ul>
+			
+		<volist name="result_knowledge" id="rk">
+		<eq name="rk.type" value="2">
+		<li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		<else/>
+		<li><a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		</eq>
+		</volist>
+		</ul>
+	  </div>
+	  <div class="left_kepu">
+		<span class="pub_title"><img src="__PUBLIC__/index/images/tt-cont.jpg" width="180" height="61" /></span>
+		<div class="pub_clear"></div>
+		<div class="indexcont"><b>委员会合作及宣传推广</b><br />
+		电话:82046662-3239<br />
+	    Email:movie@1905.com<br />
+	    <br />
+		<b>展会活动开展联系</b><br />
+		电话:82046662-3239<br />
+		Email:movie@1905.com</div>
+	</div>
+   </div>
+  <div class="cont_center">
+        <div style="height:300px;">
+        <div>
+        	<span class="pub_news"><img src="__PUBLIC__/index/images/tt-news.jpg" width="128" height="30" /></span>
+			<span class="pub_more"><a href="__ROOT__/about/dynamic">更多>></a></span>
+		</div>
+            <div class="pub_clear"></div>
+            <div class="news_nr">
+            <ul>
+	      <volist name="result_new" id="rn">
+	      <eq name="i" value="1">
+	      <li><a href="__ROOT__/about/dynamicinfo/id/<!--{$rn.id}--!>"><!--{$rn.title}--!></a><a class="news_time"><!--{$rn.addtime|date="Y-m-d", ###}--!></a></li>
+	      <div class="news_detail"><!--{$rn.content|strip_tags}--!></div>	
+
+	      <else/>
+	      <li><a href="__ROOT__/about/dynamicinfo/id/<!--{$rn.id}--!>"><!--{$rn.title}--!></a><a class="news_time"><!--{$rn.addtime|date="Y-m-d", ###}--!></a></li>
+	      </eq>
+	      </volist>		
+            </ul>
+            	
+            </div>
+        </div>
+		<div style="height:190px;">
+        <div class="center_news">
+          <div>
+		  <span class="pub_news"><img src="__PUBLIC__/index/images/tt-xueshu.jpg" width="128" height="30" /></span>
+		  <span class="pub_more"><a href="__ROOT__/science/newactivity">更多>></a></span>
+		  </div>
+          <div class="pub_clear"></div>
+          <div class="news_nr">
+            <ul>
+		<volist name="result_science" id="rs">
+		<li><a href="__ROOT__/science/newinfo/id/<!--{$rs.id}--!>"><!--{$rs.title}--!></a><a class="news_time"></a></li>
+		</volist>
+            </ul>
+          </div>
+        </div>
+        <div class="pub_zhuanjia">
+          <div style="height:35px"> 
+		  <span class="pub_news"><img src="__PUBLIC__/index/images/tt-zhuanjia.jpg" width="128" height="30" /></span>
+		  <span class="pub_more"><a href="__ROOT__/expert/teacherlist">更多>></a></span>
+
+		  </div>
+		  <div class="pub_clear"></div>
+		<div class="zj_name"><ul>
+		<volist name="result_expert" id="re">
+		  <li><a href="__ROOT__/expert/teacherinfo/id/<!--{$re.id}--!>"><!--{$re.name}--!></a></li>
+		</volist>
+		</ul></div>
+        </div>
+		</div>
+    <div>
+          <div> <span class="pub_news"><img src="__PUBLIC__/index/images/tt-jiankang.jpg" width="128" height="30" /></span> <span class="pub_more"><a href="__ROOT__/knowledge/publicknowledgecategory">更多&gt;&gt;</a></span> </div>
+          <div class="pub_clear"></div>
+      <div class="kepu_nr">
+            <ul>
+              <li class="kepu_pic"><img style="float:left; margin-right:5px;" src="__PUBLIC__/index/images/pic1.jpg" width="103" height="79" />大众科普相关介绍</li>
+	      <volist name="publicknowledge" id="p">
+	      <li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$p.id}--!>"><!--{$p.title}--!></a></li>
+	      </volist>
+            </ul>
+      </div>
+          <div class="kepu_nr">
+            <ul>
+              <li class="kepu_pic"><img style="float:left; margin-right:5px;" src="__PUBLIC__/index/images/pic2.jpg" width="103" height="79" />专业科普相关介绍</li>
+	      <volist name="specialtyknowledge" id="s">
+	      <li><a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$s.id}--!>>"><!--{$s.title}--!></a></li>
+	      </volist>
+            </ul>
+          </div>
+    </div>
+  </div>
+</div>
+<include file="Index:footer" />
+
+</body>
+</html>

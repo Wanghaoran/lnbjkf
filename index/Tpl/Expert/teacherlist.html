@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>专家智库 - 中国老年学学会-保健康复委员会</title>
+<link href="__PUBLIC__/index/css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<include file="Index:header" />
+
+<div id="container">
+  <div class="erji_lf">
+    <div class="erji_pubnews">
+        <div class="erji_pubtt"><img src="__PUBLIC__/index/images/tt-jiankang.jpg" width="128" height="30" /></div>
+        <div class="pub_clear"></div>
+        <div class="erji_pubnr">
+          <ul>
+		<volist name="result_knowledge" id="rk">
+		<eq name="rk.type" value="2">
+		<li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		<else/>
+		<li><a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		</eq>
+		</volist>
+          </ul>
+        </div>
+    </div>
+     <div class="left_kepu"> <span class="pub_title"><img src="__PUBLIC__/index/images/tt-cont.jpg" width="180" height="61" /></span>
+         <div class="pub_clear"></div>
+       <div class="indexcont"><b>委员会合作及宣传推广</b><br />
+         电话:82046662-3239<br />
+         Email:movie@1905.com<br />
+         <br />
+         <b>展会活动开展联系</b><br />
+         电话:82046662-3239<br />
+         Email:movie@1905.com</div>
+     </div>
+     <div></div>
+  </div>
+  <div class="erji_center">
+  <div class="erji_rttop"><span class="erji_rrtitle">专家智库</span><span class="erji_rtnav"><strong>当前位置：</strong>首页 - 专家智库</span></div>
+  <div>
+    <php>
+    for($i = 0; $i < count($result);$i++){
+      echo '<table class="erji_expert" width="100%" border="0" cellspacing="0" cellpadding="0"><tr>';
+      echo '<td width="50%"><table width="360" border="0" cellspacing="0" cellpadding="0"><tr><td width="36%" rowspan="2"><img class="repert_img" src="__ROOT__/Upload/' . $result[$i]['pic'] . '" width="120" height="140" /></td><td width="66%">' . msubstr(strip_tags($result[$i]['content']), 0, 50) . '</td></tr><td class="erji_textrt"><a href="__ROOT__/expert/teacherinfo/id/' . $result[$i]['id'] . '"><img src="__PUBLIC__/index/images/xiangxi.jpg" width="73" height="25" border="0" /></a></td></tr></table></td>';
+      if($i < count($result)-1){
+        echo '<td width="50%"><table width="360" border="0" cellspacing="0" cellpadding="0"><tr><td width="36%" rowspan="2"><img class="repert_img" src="__ROOT__/Upload/' . $result[$i+1]['pic'] . '" width="120" height="140" /></td><td width="66%">' . msubstr(strip_tags($result[$i+1]['content']), 0, 50) . '</td></tr><td class="erji_textrt"><a href="__ROOT__/expert/teacherinfo/id/' . $result[$i+1]['id'] . '"><img src="__PUBLIC__/index/images/xiangxi.jpg" width="73" height="25" border="0" /></a></td></tr></table></td>';
+        $i++;
+      }
+      echo '</tr></table>';
+    }
+    </php>
+<div style="margin-top:15px;float:right;"><!--{$show}--!></div>
+  </div>
+  </div>
+  <div class="pub_clear"></div>
+</div>
+<include file="Index:footer" />
+
+</body>
+</html>

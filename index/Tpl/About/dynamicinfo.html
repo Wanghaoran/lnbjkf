@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!--{$result.title}--!> - 中国老年学学会-保健康复委员会</title>
+<link href="__PUBLIC__/index/css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<include file="Index:header" />
+
+<div id="container">
+  <div class="erji_lf">
+	  <div class="erji_lftitle"><img src="__PUBLIC__/index/images/erji-tt1.jpg" width="179" height="60" /></div>
+	  <div class="erji_lfmenu">
+	  	<ul>
+			<li><a href="__ROOT__/about/introduction">委员会简介</a></li>
+			<li><a href="__ROOT__/about/charter">委员会章程</a></li>
+			<li><a href="__ROOT__/about/dynamic">委员会动态</a></li>
+		</ul>
+	  </div>
+      <div class="erji_pubnews">
+        <div class="erji_pubtt"><img src="__PUBLIC__/index/images/tt-jiankang.jpg" width="128" height="30" /></div>
+        <div class="pub_clear"></div>
+        <div class="erji_pubnr">
+          <ul>
+		<volist name="result_knowledge" id="rk">
+		<eq name="rk.type" value="2">
+		<li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		<else/>
+		<li><a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		</eq>
+		</volist>
+          </ul>
+        </div>
+      </div>
+     <div></div>
+  </div>
+  <div class="erji_center">
+    <div class="erji_rttop"><span class="erji_rrtitle">委员会动态</span><span class="erji_rtnav"><strong>当前位置：</strong>首页 - <a href="__ROOT__/about/introduction">关于委员会</a> - 委员会动态</span></div>
+	<p class="erji_nrtitle"><!--{$result.title}--!></p>
+    <div style="overflow:hidden;width:100%;"><!--{$result.content|stripslashes}--!></div>
+  </div>
+  <div class="pub_clear"></div>
+</div>
+<include file="Index:footer" />
+
+</body>
+</html>

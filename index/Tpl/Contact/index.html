@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>联系我们 - 中国老年学学会-保健康复委员会</title>
+<link href="__PUBLIC__/index/css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<include file="Index:header" />
+
+<div id="container">
+  <div class="erji_lf">
+    <div class="erji_lf">
+      <div class="erji_lftitle"><img src="__PUBLIC__/index/images/erji-tt3.jpg" width="179" height="60" /></div>
+      <div class="erji_lfmenu">
+        <ul>
+          <li><a href="__ROOT__">首 页</a></li>
+<li><a href="__ROOT__/about/introduction">关于委员会</a></li>
+<li><a href="__ROOT__/science/newactivity">学术园地</a></li>
+<li><a href="__ROOT__/knowledge/publicknowledgecategory">科普知识</a></li>
+<li><a href="__ROOT__/expert/teacherlist">专家智库</a></li>
+<li><a href="__ROOT__/server/serverlist">社会服务</a></li>
+<li><a href="__ROOT__/education/content">培训教育</a></li>
+
+<li><a href="__ROOT__/contact">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="erji_pubnews">
+        <div class="erji_pubtt"><img src="__PUBLIC__/index/images/tt-jiankang.jpg" width="128" height="30" /></div>
+        <div class="pub_clear"></div>
+        <div class="erji_pubnr">
+          <ul>
+            <volist name="result_knowledge" id="rk">
+		<eq name="rk.type" value="2">
+		<li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		<else/>
+		<li><a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		</eq>
+		</volist>
+          </ul>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div></div>
+  </div>
+  <div class="erji_center">
+  <div class="erji_rttop"><span class="erji_rrtitle">联系我们</span><span class="erji_rtnav"><strong>当前位置：</strong>首页 - 联系我们</span></div>
+  <div class="erji_content"><h3>中国老年学学会保健康复委员会</h3>
+    地址：北京市建国门内大街15号A座313室<br />
+    联系电话：0371-65786191<br />
+    传真：0371-65786180<br />
+    网址：http://www.yiyaowyh.com<br />
+    邮编：45000</div>
+  </div>
+  <div class="pub_clear"></div>
+</div>
+<include file="Index:footer" />
+
+</body>
+</html>
