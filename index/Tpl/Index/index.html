@@ -75,7 +75,7 @@
 	      <volist name="result_new" id="rn">
 	      <eq name="i" value="1">
 	      <li><a href="__ROOT__/about/dynamicinfo/id/<!--{$rn.id}--!>"><!--{$rn.title}--!></a><a class="news_time"><!--{$rn.addtime|date="Y-m-d", ###}--!></a></li>
-	      <div class="news_detail"><!--{$rn.content|strip_tags}--!></div>	
+	      <div class="news_detail"><!--{$rn.content|strip_tags|msubstr=0,200}--!></div>	
 
 	      <else/>
 	      <li><a href="__ROOT__/about/dynamicinfo/id/<!--{$rn.id}--!>"><!--{$rn.title}--!></a><a class="news_time"><!--{$rn.addtime|date="Y-m-d", ###}--!></a></li>
