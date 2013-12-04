@@ -24,6 +24,7 @@ class IndexAction extends CommonAction {
     //专家智库
     $result_expert = M('Expert') -> field('id,name') -> limit(25) -> order('addtime DESC') -> select();
     $this -> assign('result_expert', $result_expert);
+
     $this -> display();
   }
 }

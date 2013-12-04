@@ -1,0 +1,49 @@
+<div class="panel">
+  <h1>回复留言</h1>
+  <div class="pageFormContent" layoutH="56">
+    <form method="post" action="__ACTION__/callbackType/closeCurrent/navTabId/message_message" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone)">
+      <p style="width:400px;"><label>姓 名：</label>
+      <input style="margin-left:10px;" type="text" class="textInput" name="name" value="<!--{$result.name}--!>">
+      </p>
+	<p style="width:400px;"><label>性 别：</label>
+        <eq name="result.sex" value="男">
+        <input type="radio" name="sex" value="男" checked="checked" /> 男 
+        <input type="radio" name="sex" value="女" /> 女
+        <else/>
+        <input type="radio" name="sex" value="男" /> 男 
+        <input type="radio" name="sex" value="女" checked="checked" /> 女
+        </eq>
+      </p>
+      <p style="width:400px;"><label>通讯地址：</label>
+      <input style="margin-left:10px;" type="text" class="textInput" name="address" size="30" value="<!--{$result.address}--!>">
+      </p>
+      <p style="width:400px;"><label>手机号：</label>
+      <input style="margin-left:10px;" type="text" class="textInput" name="mobilephone" size="30" value="<!--{$result.mobilephone}--!>">
+      </p>
+	<p style="width:400px;"><label>QQ 号码：</label>
+      <input style="margin-left:10px;" type="text" class="textInput" name="qqcode" size="30" value="<!--{$result.qqcode}--!>">
+      </p>
+	<p style="width:400px;"><label>E-mail：</label>
+      <input style="margin-left:10px;" type="text" class="textInput" name="email" size="30" value="<!--{$result.email}--!>">
+      </p>
+
+      <p style="width:800px;height:100%;"><label>留言内容：</label>
+	<textarea style="margin-left:10px;width:590px;" name="content"><!--{$result.content}--!></textarea>
+      </p>
+      
+      <div class="divider"></div>
+      <p style="width:100%;height:400px;">
+      <textarea class="editor" name="reply" style="width:96%;" rows="20"><!--{$result.reply|stripslashes}--!></textarea>
+
+	</p>
+<input type="hidden" name="id" value="<!--{$Think.get.id}--!>" />
+      <div class="formBar">
+	<ul>
+	  <li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+	  <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+	</ul>
+      </div>
+    </form>
+
+  </div>
+</div>

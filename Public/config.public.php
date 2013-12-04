@@ -13,9 +13,9 @@ return array(
 
   'DB_TYPE' => 'mysql',  //数据库类型
   'DB_HOST' => 'localhost',  //服务器地址
-  'DB_NAME' => 'laonianbaojian',  //数据库名
-  'DB_USER' => 'laonianbaojian',  //用户名
-  'DB_PWD' => 'v7m2m6',  //密码
+  'DB_NAME' => 'laonian',  //数据库名
+  'DB_USER' => 'root',  //用户名
+  'DB_PWD' => 'jilexingqiu',  //密码
   'DB_PORT' => '3306',  //端口
   'DB_PREFIX' => 'laonian_',  //数据库表前缀
 

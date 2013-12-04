@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线留言 - 中国老年学学会-保健康复委员会</title>
+<link href="__PUBLIC__/index/css/layout.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/index/js/jquery-1.10.2.min.js" ></script>
+<script>
+var toCheck = function(){
+  if(!$('#email').val()){
+    alert('E-mail不能为空！');
+    return false;
+  }
+  if(!$('#content').val()){
+    alert('留言内容不能为空！');
+    return false;
+  }
+  return true;
+}
+</script>
+</head>
+
+<body>
+<include file="Index:header" />
+<div id="container">
+  <div class="erji_lf">
+    <div class="erji_lf">
+      <div class="erji_lftitle"><img src="__PUBLIC__/index/images/erji-tt3.jpg" width="179" height="60" /></div>
+      <div class="erji_lfmenu">
+        <ul>
+          <li><a href="__ROOT__/about/introduction">关于委员会</a></li>
+          <li><a href="__ROOT__/science/newactivity">学术园地</a></li>
+          <li><a href="__ROOT__/knowledge/publicknowledgecategory">科普知识</a></li>
+		  <li><a href="__ROOT__/expert/teacherlist">专家智库</a></li>
+		  <li><a href="__ROOT__/server/serverlist">社会服务</a></li>
+		  <li><a href="__ROOT__/education/content">培训教育</a></li>
+		  <li><a href="__ROOT__/contact">联系我们</a></li>
+          <li><a href="__ROOT__/message">在线留言</a></li>
+        </ul>
+      </div>
+      <div class="erji_pubnews">
+        <div class="erji_pubtt"><img src="__PUBLIC__/index/images/tt-jiankang.jpg" width="128" height="30" /></div>
+        <div class="pub_clear"></div>
+        <div class="erji_pubnr">
+          <ul>
+            <volist name="result_knowledge" id="rk">
+		<eq name="rk.type" value="2">
+		<li><a href="__ROOT__/knowledge/publicknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		<else/>
+		<li><a href="__ROOT__/knowledge/specialtyknowledgecategoryinfo/id/<!--{$rk.id}--!>"><!--{$rk.title}--!></a></li>
+		</eq>
+		</volist>
+          </ul>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div></div>
+  </div>
+  <div class="erji_center">
+  <div class="erji_rttop"><span class="erji_rrtitle">在线留言</span><span class="erji_rtnav"><strong>当前位置：</strong>首页 - 在线留言</span></div>
+  <div class="bn_message"><a href="__ROOT__/message/show"><img src="__PUBLIC__/index/images/button-ck.jpg" width="106" height="28" /></a></div>
+<table style="margin-top:30px;" width="600" border="0" cellspacing="0" cellpadding="0">
+  <form method="post" action="__ACTION__" onsubmit="return toCheck();">
+  <tr>
+    <td class="mess_left">您的姓名：</td>
+    <td>
+      <input type="text" name="name" id="textfield" />
+    </td>
+  </tr>
+  <tr>
+    <td class="mess_left">性 别：</td>
+    <td>
+      <input name="sex" type="radio" id="radio" value="男" checked="checked" />
+    男
+    　
+    <input type="radio" name="sex" id="radio2" value="女" />
+    女
+    </td>
+  </tr>
+  <tr>
+    <td class="mess_left">通讯地址：</td>
+    <td>
+      <input type="text" name="address" id="textfield3" />
+    </td>
+  </tr>
+  <tr>
+    <td class="mess_left">您的手机号：</td>
+    <td>
+      <input type="text" name="mobilephone" id="textfield4" />
+    </td>
+  </tr>
+  <tr>
+    <td class="mess_left">您的QQ：</td>
+    <td>
+      <input type="text" name="qqcode" id="textfield5" />
+    </td>
+  </tr>
+  <tr>
+    <td class="mess_left">E-mail：</td>
+    <td>
+      <input type="text" name="email" id="email" />
+    <span class="mess_btfont">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="mess_left">请您留言：</td>
+    <td>
+      <textarea name="content" id="content" cols="45" rows="5"></textarea>
+    <span class="mess_btfont">*</span>
+  </td>
+  </tr>
+  <tr>
+    <td class="mess_btfont" colspan="2">如果您对我们的项目感兴趣或者有什么问题咨询，欢迎您留言，我们会在第一时间与您联系！</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" name="button" id="button" value="提交" />
+    </td>
+    </tr>
+</form>
+</table>
+
+  </div>
+  <div class="pub_clear"></div>
+</div>
+<include file="Index:footer" />
+</body>
+</html>

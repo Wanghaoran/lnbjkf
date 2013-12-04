@@ -3,7 +3,7 @@
      padding:0px;
 	 color:#343434;
 	 line-height:22px;
-     font-family:Arial,"宋体";
+     font-family:Arial,"微软雅黑";
      font-size:14px;
 }
 a{
@@ -35,10 +35,9 @@ background:#ffffff;
 margin:0 auto;
 }
 .nav{
-width:902px;
 height:38px;
 margin:0 auto;
-padding:0 50px;
+padding:0 30px;
 background:url(../images/nav-bg.jpg) repeat-x;
 }
 .nav li{
@@ -62,7 +61,6 @@ background:url(../images/nav_hoverbg.jpg) repeat-x;}
 
 .flash{
 width:1002px;
-margin:0 auto;
 height:198px;
 background:url(../images/bannar.jpg) no-repeat;
 }
@@ -182,10 +180,10 @@ float:left;}
 
 .zj_name li a{
 display:block;
-padding:4px 15px;
+padding:0 5px;
 }
 .zj_name li a:hover{
-padding:4px 15px;
+padding:0 5px;
 background:#4d9400;
 color:#ffffff;
 }
@@ -216,23 +214,30 @@ text-decoration:underline;
 }
 
 /**********首页底部CSS**********/
+#link{
+	clear:both;
+	margin:0 auto;
+	width:980px;
+	line-height:28px;
+	padding-top:10px;
+	}
 #footer{
 clear:both;
 background:url(../images/footer-bg.jpg) repeat-x;
 width:1002px;
-height:80px;
+height:90px;
 font-size:12px;
 text-align:center;
 line-height:24px;
-padding:15px; 
-margin:0 auto;
+padding-top:20px; 
+margin:6px auto 0 auto;
 }
-
 
 /**********二级界面CSS**********/
 .erji_lf{
 float:left;
 width:230px;
+height:auto;
 border-right:1px solid #bdbdbd;
 }
 .erji_center{
@@ -331,3 +336,29 @@ font-weight:bold;
 text-align:center;
 line-height:30px;
 }
+/*在线留言开始*/
+.bn_message{
+	width:90%;
+	text-align:right;}
+.mess_left{
+	text-align:right;
+	line-height:36px;}
+.mess_btfont{
+	padding-left:10px;
+	color:#e12222;
+	line-height:40px;}
+.ly_title{
+	display:block;
+	color:#a75c1c;
+	background:url(../images/icon-q.jpg) no-repeat;
+	padding-left:20px;
+	margin-top:10px;
+	border-bottom:1px solid #d0d0d0;
+	}
+.ly_cont{
+	display:block;
+	background:url(../images/icon-arrow.jpg) no-repeat;
+	padding-left:28px;
+	margin-top:10px;
+	}
+/*在线留言结束*/
