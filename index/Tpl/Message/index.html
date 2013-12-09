@@ -8,12 +8,24 @@
 <script src="__PUBLIC__/index/js/jquery-1.10.2.min.js" ></script>
 <script>
 var toCheck = function(){
+  var patrn=/^[_.0-9a-z-]+@([0-9a-z][0-9a-z-]+.)+[a-z]{2,3}$/;
+  var RegCellPhone = /^([0-9]{11})?$/;
   if(!$('#email').val()){
     alert('E-mail不能为空！');
     return false;
   }
   if(!$('#content').val()){
     alert('留言内容不能为空！');
+    return false;
+  }
+  if(!patrn.exec($('#email')[0].value)){
+    $('#email').focus();
+    alert('电子邮件格式不正确');
+    return false;
+  }
+  if(!RegCellPhone.exec($('#mobilephone')[0].value)){
+    $('#mobilephone').focus();
+    alert('移动电话格式不正确');
     return false;
   }
   return true;
@@ -88,7 +100,7 @@ var toCheck = function(){
   <tr>
     <td class="mess_left">您的手机号：</td>
     <td>
-      <input type="text" name="mobilephone" id="textfield4" />
+      <input type="text" name="mobilephone" id="mobilephone" />
     </td>
   </tr>
   <tr>

@@ -103,4 +103,20 @@ class AboutAction extends CommonAction {
     $this -> assign('result', $result);
     $this -> display();
   }
+
+  public function member(){
+    $About = M('About');
+    if(!empty($_POST['content'])){
+      $where['name'] = $this -> _post('name');
+      $data['content'] = $_POST['content'];
+      if($About -> where($where) -> save($data)){
+	$this -> success(L('DATA_UPDATE_SUCCESS'));
+      }else{
+        $this -> error(L('DATA_UPDATE_ERROR'));
+      }
+    }
+    $result = $About -> getFieldByname(ACTION_NAME, 'content');
+    $this -> assign('result', $result);
+    $this -> display();
+  }
 }

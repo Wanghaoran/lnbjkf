@@ -16,6 +16,10 @@ class AboutAction extends CommonAction {
     $this -> introduction();
   }
 
+  public function member(){
+    $this -> introduction();
+  }
+
   public function dynamic(){
     $AboutDynamic = M('AboutDynamic');
     import("ORG.Util.Page");// 导入分页类
